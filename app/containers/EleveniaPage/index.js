@@ -9,20 +9,22 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { find } from 'lodash';
 
 import NavBar from 'components/NavBar';
 import Slider from 'components/Slider';
+import Box from 'components/Box';
+
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectEleveniaPage from './selectors';
 import reducer from './reducer';
-import { filterData } from './actions';
+// import { filterData } from './actions';
 import saga from './saga';
-import messages from './messages';
+// import messages from './messages';
 
 const Wrapper = styled.main`
   position: relative;
@@ -75,6 +77,7 @@ export class EleveniaPage extends React.PureComponent {
           <Container>
             <NavBar data={menu} />
             <Slider data={banner} />
+            <Box />
           </Container>
         </article>
       </Wrapper>
